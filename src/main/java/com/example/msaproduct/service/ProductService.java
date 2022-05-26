@@ -1,5 +1,6 @@
 package com.example.msaproduct.service;
 
+import com.example.msaproduct.config.FeignClient;
 import com.example.msaproduct.domain.Product;
 import com.example.msaproduct.domain.ProductRepository;
 import com.example.msaproduct.util.ResponseForm;
@@ -16,6 +17,7 @@ import java.util.List;
 public class ProductService {
 
     private final ProductRepository productRepository;
+    private final FeignClient feignClient;
 
     public ResponseForm productMaking(String name, Long price, Long amount){
         try {
@@ -83,6 +85,14 @@ public class ProductService {
             ResponseForm.fail(0, e.getMessage());
         }
         return ResponseForm.successWithList(products);
+    }
+
+    /**
+     * test
+     */
+
+    public String feignTest(){
+        return feignClient.feignTest();
     }
 
 }

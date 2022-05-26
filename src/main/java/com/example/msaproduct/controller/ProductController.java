@@ -48,4 +48,18 @@ public class ProductController {
         log.info("product buy: {}", name);
         return productService.productBuy(name);
     }
+
+    /**
+     * test
+     */
+
+    @GetMapping("/feign")
+    public String feignTest(){
+        return productService.feignTest();
+    }
+
+    @GetMapping("/feign-test")
+    public String feignTest2(){
+        return "Feign Client 내부 호출";
+    }
 }
