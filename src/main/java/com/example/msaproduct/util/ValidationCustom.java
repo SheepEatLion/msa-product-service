@@ -1,6 +1,5 @@
 package com.example.msaproduct.util;
 
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.context.annotation.Bean;
 
@@ -9,7 +8,7 @@ import java.util.regex.Pattern;
 public class ValidationCustom {
 
     public static void nameCheck(String name){
-        String regex = "[가-힣a-zA-Z]+$";
+        String regex = "^[가-힣a-zA-Z]+$";
         if(!Pattern.matches(regex, name)){
             throw new ServiceException("영문과 한글만 입력가능합니다.");
         }
