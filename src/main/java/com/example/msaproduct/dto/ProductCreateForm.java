@@ -1,4 +1,4 @@
-package com.example.msaproduct.util;
+package com.example.msaproduct.dto;
 
 import lombok.Getter;
 import lombok.Setter;

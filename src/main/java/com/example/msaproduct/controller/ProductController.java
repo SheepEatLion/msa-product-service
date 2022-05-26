@@ -1,7 +1,7 @@
 package com.example.msaproduct.controller;
 
 import com.example.msaproduct.service.ProductService;
-import com.example.msaproduct.util.ProductCreateForm;
+import com.example.msaproduct.dto.ProductCreateForm;
 import com.example.msaproduct.util.ResponseForm;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
